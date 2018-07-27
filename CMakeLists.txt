@@ -53,6 +53,7 @@ if (build_static_lib)
 
         require_cpp11()
         add_library(easyloggingpp STATIC src/easylogging++.cc)
+		target_include_directories(easyloggingpp PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
         install(TARGETS
             easyloggingpp
